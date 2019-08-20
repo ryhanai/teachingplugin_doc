@@ -34,7 +34,7 @@ $ mkdir -p build
 # teachingPluginとサンプルコントローラのダウンロード
 $ git clone https://github.com/ryhanai/teachingplugin ext/teachingPlugin
 $ git clone https://github.com/ryhanai/SampleTPControllerPlugin ext/SampleTPControllerPlugin
-$ ./ext/teachingPlugin/misc/install-requisites-ubuntu-18.04.sh
+$ ./ext/teachingPlugin/misc/script/install-requisites-ubuntu-18.04.sh
 
 # コンパイル
 $ cd build
