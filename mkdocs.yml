@@ -1,5 +1,5 @@
 site_name: Teaching Plugin
-repo_url: https://bitbucket.org/hanai/teachingplugin/
+repo_url: https://github.com/ryhanai/teachingplugin/
 edit_uri: ''
 markdown_extensions:
  - admonition

@@ -21,45 +21,42 @@ teachingPluginはロボットの教示ソフトウェアの一種です。あら
 * Ubuntu18.04LTS
 * Choreonoid 1.7.0
 
-### 環境構築
+### 環境構築、サンプルデータの入手と実行
 
-Choreonoid
 ```console
+# Choreonoidのダウンロードと依存パッケージのインストール
 $ wget https://choreonoid.org/_downloads/choreonoid-1.7.0.zip
 $ unzip choreonoid-1.7.0.zip
-```
+$ cd choreonoid-1.7.0/
+$ ./misc/script/install-requisites-ubuntu-18.04.sh
+$ mkdir -p build
 
-SQLite
-```console
-$ sudo apt install libqt5sql5-sqlite libsqlite3-0 libsqlite3-dev sqlite3
-```
+# teachingPluginとサンプルコントローラのダウンロード
+$ git clone https://github.com/ryhanai/teachingplugin ext/teachingPlugin
+$ git clone https://github.com/ryhanai/SampleTPControllerPlugin ext/SampleTPControllerPlugin
+$ ./ext/teachingPlugin/misc/install-requisites-ubuntu-18.04.sh
 
-teachingPluginとサンプルコントローラのセット
-```console
-$ cd $CHOREONOID_DIR/ext # $CHOREONOID_DIRはChoreonoidを展開したディレクトリ
-$ git clone -b dev17 https://bitbucket.org/hanai/teachingplugin.git teachingPlugin
-$ git clone https://bitbucket.org/hanai/samplehirocontroller2plugin.git SampleHiroController2Plugin
-```
-
-コンパイル
-```console
-$ cd $CHOREONOID_DIR
-$ mkdir build
+# コンパイル
 $ cd build
-$ ccmake .. # BUILD_TEACHING_PLUGIN=ON, BUILD_SAMPLE_HIROCONTROLLER=ONにする（デフォルトでON）
-$ make # make -j8などの並列コンパイルやccacheの利用などで時間短縮しましょう。
-```
+$ cmake .. -DBUILD_TEACHING_PLUGIN=ON -DBUILD_SAMPLE_HIROCONTROLLER=ON
+#
+# GUIを使いたい場合は
+# $ ccmake .. # BUILD_TEACHING_PLUGIN=ON, BUILD_SAMPLE_HIROCONTROLLER=ONにする（デフォルトでON）
+# 必要ないオプションを切ると、コンパイル時間を短くできます。
 
-サンプルデータの取得
+$ make -j8
 
-[サンプルデータ](https://drive.google.com/open?id=119r3ddfe8cumd2JSz4dFfbiD3YWBMfKd)を`$CHOREONOID_DIR/ext/teachingPlugin/share/project`に`teachingDB.sqlite3`という名前でダウンロードします。
+# サンプルデータの取得
+$ cd ../choreonoid-1.7.0/ext/teachingPlugin/share/project
+$ wget "https://drive.google.com/uc?export=download&id=119r3ddfe8cumd2JSz4dFfbiD3YWBMfKd" -O teachingDB.sqlite3
 
 ### 実行
-
-```console
-$ cd $CHOREONOID_DIR/ext/teachingPlugin/share/project
-$ $CHOREONOID_DIR/build/bin/choreonoid teaching_plugin.cnoid
+$ choreonoid-1.7.0/build/bin/choreonoid teaching_plugin.cnoid
 ```
+
+!!!Note
+    サンプルデータのダウンロードに失敗する場合は、[ここ](https://drive.google.com/open?id=119r3ddfe8cumd2JSz4dFfbiD3YWBMfKd)から手動でダウンロードし、`teachingDB.sqlite3`という名前で保存してください。
+
 
 ##<i class="fa fa-arrow-circle-right" aria-hidden="true"></i> ライセンス
 
