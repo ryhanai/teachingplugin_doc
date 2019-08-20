@@ -1,18 +1,16 @@
 # teachingPlugin_doc
 
-## development
+## Edit source files in 'master' branch
 
-``` shell
-$ mkdoc serve
+```shell
+$ git clone https://github.com/ryhanai/teachingplugin_doc
+$ cd teachingplugin_doc
+
+update *.md files
+git add, git commit, git push
+
+$ mkdocs gh-deploy
 ```
 
-## deployment
-
-``` shell
-$ mkdoc build
-$ cp -r site/* hanai.bitbucket.io/teachingplugin/
-$ git add
-$ git commit
-$ git push
-```
+## If you'd like to check the generated document before deployment, use 'mkdocs build' or 'mkdocs serve'.
 
