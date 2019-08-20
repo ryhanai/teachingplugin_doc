@@ -1,4 +1,4 @@
-# Welcome to teachingPlugin (2019.07.22)
+# Welcome to teachingPlugin (2019.08.20)
 ---
 <!-- For full documentation visit [mkdocs.org](https://mkdocs.org). -->
 
