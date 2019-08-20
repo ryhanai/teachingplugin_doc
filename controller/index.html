@@ -1,0 +1,787 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>コントローラ - Teaching Plugin</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="352" height="448"
+    viewBox="0 0 352 448" id="__bitbucket">
+  <path fill="currentColor" d="M203.75 214.75q2 15.75-12.625 25.25t-27.875
+        1.5q-9.75-4.25-13.375-14.5t-0.125-20.5 13-14.5q9-4.5 18.125-3t16 8.875
+        6.875 16.875zM231.5 209.5q-3.5-26.75-28.25-41t-49.25-3.25q-15.75
+        7-25.125 22.125t-8.625 32.375q1 22.75 19.375 38.75t41.375 14q22.75-2
+        38-21t12.5-42zM291.25
+        74q-5-6.75-14-11.125t-14.5-5.5-17.75-3.125q-72.75-11.75-141.5 0.5-10.75
+        1.75-16.5 3t-13.75 5.5-12.5 10.75q7.5 7 19 11.375t18.375 5.5 21.875
+        2.875q57 7.25 112 0.25 15.75-2 22.375-3t18.125-5.375 18.75-11.625zM305.5
+        332.75q-2 6.5-3.875 19.125t-3.5 21-7.125 17.5-14.5 14.125q-21.5
+        12-47.375 17.875t-50.5 5.5-50.375-4.625q-11.5-2-20.375-4.5t-19.125-6.75-18.25-10.875-13-15.375q-6.25-24-14.25-73l1.5-4
+        4.5-2.25q55.75 37 126.625 37t126.875-37q5.25 1.5 6 5.75t-1.25 11.25-2
+        9.25zM350.75 92.5q-6.5 41.75-27.75 163.75-1.25 7.5-6.75 14t-10.875
+        10-13.625 7.75q-63 31.5-152.5
+        22-62-6.75-98.5-34.75-3.75-3-6.375-6.625t-4.25-8.75-2.25-8.5-1.5-9.875-1.375-8.75q-2.25-12.5-6.625-37.5t-7-40.375-5.875-36.875-5.5-39.5q0.75-6.5
+        4.375-12.125t7.875-9.375 11.25-7.5 11.5-5.625 12-4.625q31.25-11.5
+        78.25-16 94.75-9.25 169 12.5 38.75 11.5 53.75 30.5 4 5 4.125
+        12.75t-1.375 13.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Teaching Plugin" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Teaching Plugin
+              </span>
+              <span class="md-header-nav__topic">
+                コントローラ
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://bitbucket.org/hanai/teachingplugin/" title="Go to repository" class="md-source" data-md-source="bitbucket">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__bitbucket" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Bitbucket
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Teaching Plugin" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Teaching Plugin
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://bitbucket.org/hanai/teachingplugin/" title="Go to repository" class="md-source" data-md-source="bitbucket">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__bitbucket" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Bitbucket
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="はじめに" class="md-nav__link">
+      はじめに
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../getting_started/" title="試してみる" class="md-nav__link">
+      試してみる
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      ユーザガイド
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        ユーザガイド
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../task/" title="タスク" class="md-nav__link">
+      タスク
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../views/" title="ビューの操作" class="md-nav__link">
+      ビューの操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../workflow/" title="ワークフロー" class="md-nav__link">
+      ワークフロー
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../import_export/" title="Import/Export" class="md-nav__link">
+      Import/Export
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        コントローラ
+      </label>
+    
+    <a href="./" title="コントローラ" class="md-nav__link md-nav__link--active">
+      コントローラ
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title=" コントローラの実装方法" class="md-nav__link">
+     コントローラの実装方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ros" title=" ROSを使ったコントローラの実装" class="md-nav__link">
+     ROSを使ったコントローラの実装
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../task_design/" title="タスクの設計" class="md-nav__link">
+      タスクの設計
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project_file/" title="プロジェクトファイル" class="md-nav__link">
+      プロジェクトファイル
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../config/" title="teachingPluginの設定" class="md-nav__link">
+      teachingPluginの設定
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../terms/" title="用語" class="md-nav__link">
+      用語
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../papers/" title="関連論文" class="md-nav__link">
+      関連論文
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title=" コントローラの実装方法" class="md-nav__link">
+     コントローラの実装方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ros" title=" ROSを使ったコントローラの実装" class="md-nav__link">
+     ROSを使ったコントローラの実装
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">コントローラ</h1>
+<p><img alt="コントローラ" src="../img/controller.png" title="コントローラ" /></p>
+<p>コントローラはteachingPlugin本体とは別にChoreonoidのプラグインとして実装します。</p>
+<h2 id="_2"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> コントローラの実装方法</h2>
+<p>UR3を双腕構成にしたロボットを例として、その実装方法を説明します。
+ソースコードの全体は<a href="https://bitbucket.org/hanai/samplehirocontroller2plugin/src/master/UR3dualController.h"><code>UR3dualController.h</code></a>と<a href="https://bitbucket.org/hanai/samplehirocontroller2plugin/src/master/UR3dualController.cpp"><code>UR3dualController.cpp</code></a>を参照してください。</p>
+<p>まず、コントローラは<code>ControllerFramework.h</code>をインクルードし、<code>teaching::Controller</code>クラスの子クラスとして実装します。
+次にteachingPluginから呼出すためにstaticメソッドinstance()を用意します。
+コマンドは内部クラスとして実装します。以下では腕を動かすコマンド<code>MoveArmCommand</code>のクラスを定義しています。</p>
+<div class="codehilite"><pre><span></span><span class="c1">// UR3dualController.h</span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;ControllerFramework.h&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span> <span class="n">teaching</span>
+<span class="p">{</span>
+
+  <span class="k">class</span> <span class="nc">UR3dualController</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Controller</span>
+  <span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+    <span class="k">static</span> <span class="n">UR3dualController</span><span class="o">*</span> <span class="n">instance</span><span class="p">();</span>
+
+  <span class="k">private</span><span class="o">:</span>
+    <span class="k">class</span> <span class="nc">MoveArmCommand</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Command</span>
+    <span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+      <span class="n">MoveArmCommand</span><span class="p">(</span><span class="n">UR3dualController</span><span class="o">*</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span> <span class="n">c_</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span> <span class="p">}</span>
+      <span class="n">UR3dualController</span><span class="o">*</span> <span class="n">c_</span><span class="p">;</span>
+      <span class="k">virtual</span> <span class="kt">bool</span> <span class="nf">operator</span><span class="p">()(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">CompositeParamType</span><span class="o">&gt;&amp;</span> <span class="n">params</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="p">...</span>
+</pre></div>
+
+
+<p>次にコマンドの実装を書きます。ここではteachingPlugin上でfake実行するコードを書きます。
+コンストラクタから<code>registerCommands()</code>メソッドを呼出し、<code>registerCommands()</code>の中で<code>registerCommand()</code>を呼出しています。<code>registerCommand</code>はteachingPluginにこのコマンドを登録するとともに、その呼出し方（インタフェース）を知らせるものです。第一引数がコマンドの内部名、第二引数が表示名（GUI上で表示される名前でユーザが付け替えることが可能）です。第三引数に 返り値の型、第四引数のにコマンドに対する引数の名前と型を指定します。最後の引数がコマンドの実装インスタンスです。teachingPluginはこのルールにしたがって呼出しを行います。</p>
+<div class="codehilite"><pre><span></span><span class="c1">// UR3dualController.cpp</span>
+
+<span class="k">namespace</span> <span class="n">teaching</span>
+<span class="p">{</span>
+
+  <span class="n">UR3dualController</span><span class="o">*</span> <span class="n">UR3dualController</span><span class="o">::</span><span class="n">instance</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="k">static</span> <span class="n">UR3dualController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UR3dualController</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">controller</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">UR3dualController</span><span class="o">::</span><span class="n">UR3dualController</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="n">registerCommands</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="p">...</span>
+
+  <span class="kt">void</span> <span class="n">UR3dualController</span><span class="o">::</span><span class="n">registerCommands</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="n">registerCommand</span><span class="p">(</span><span class="s">&quot;moveArm&quot;</span><span class="p">,</span> <span class="s">&quot;Arm&quot;</span><span class="p">,</span> <span class="s">&quot;boolean&quot;</span><span class="p">,</span>
+                    <span class="p">{</span><span class="n">A</span><span class="p">(</span><span class="s">&quot;xyz&quot;</span><span class="p">,</span> <span class="s">&quot;double&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">A</span><span class="p">(</span><span class="s">&quot;rpy&quot;</span><span class="p">,</span> <span class="s">&quot;double&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">A</span><span class="p">(</span><span class="s">&quot;tm&quot;</span><span class="p">,</span> <span class="s">&quot;double&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">A</span><span class="p">(</span><span class="s">&quot;armID&quot;</span><span class="p">,</span> <span class="s">&quot;int&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)},</span>
+                    <span class="k">new</span> <span class="n">MoveArmCommand</span><span class="p">(</span><span class="k">this</span><span class="p">));</span> <span class="c1">// 0=left, 1=right</span>
+
+    <span class="p">...</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<p>次に<code>moveArm</code>コマンドが呼出されたときの処理を書きます。最初にVariantとして渡された引数を目的の型として取出します。この部分はどのコマンドでも同様になります。後はコマンドごとの処理になります。ここでは関節角度を補間して再生しています。</p>
+<div class="codehilite"><pre><span></span>  <span class="kt">bool</span> <span class="n">UR3dualController</span><span class="o">::</span><span class="n">MoveArmCommand</span><span class="o">::</span><span class="k">operator</span><span class="p">()(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">CompositeParamType</span><span class="o">&gt;&amp;</span> <span class="n">params</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Vector3</span> <span class="n">xyz</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">VectorX</span><span class="o">&gt;</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>
+    <span class="n">Vector3</span> <span class="nf">rpy_tmp</span><span class="p">(</span><span class="n">boost</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="n">VectorX</span><span class="o">&gt;</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]));</span>
+    <span class="n">Vector3</span> <span class="n">rpy</span> <span class="o">=</span> <span class="n">toRad</span><span class="p">(</span><span class="n">rpy_tmp</span><span class="p">);</span>
+    <span class="kt">double</span> <span class="n">duration</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+    <span class="kt">int</span> <span class="n">armID</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+    <span class="n">printLog</span><span class="p">(</span><span class="s">&quot;moveArm(&quot;</span><span class="p">,</span> <span class="n">xyz</span><span class="p">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="s">&quot;, &quot;</span><span class="p">,</span> <span class="n">rpy</span><span class="p">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="s">&quot;, &quot;</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="s">&quot;, &quot;</span><span class="p">,</span> <span class="n">armID</span><span class="p">,</span> <span class="s">&quot;)&quot;</span><span class="p">);</span>
+
+    <span class="n">BodyPtr</span> <span class="n">body</span> <span class="o">=</span> <span class="n">c_</span><span class="o">-&gt;</span><span class="n">getRobotBody</span><span class="p">();</span>
+    <span class="n">Link</span><span class="o">*</span> <span class="n">base</span> <span class="o">=</span> <span class="n">body</span><span class="o">-&gt;</span><span class="n">rootLink</span><span class="p">();</span>
+    <span class="n">Link</span><span class="o">*</span> <span class="n">wrist</span> <span class="o">=</span> <span class="n">body</span><span class="o">-&gt;</span><span class="n">link</span><span class="p">(</span><span class="n">c_</span><span class="o">-&gt;</span><span class="n">getToolLinkName</span><span class="p">(</span><span class="n">armID</span><span class="p">));</span>
+
+    <span class="n">JointPathPtr</span> <span class="n">jointPath</span> <span class="o">=</span> <span class="n">getCustomJointPath</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">wrist</span><span class="p">);</span>
+    <span class="n">jointPath</span><span class="o">-&gt;</span><span class="n">calcForwardKinematics</span><span class="p">();</span>
+
+    <span class="n">c_</span><span class="o">-&gt;</span><span class="n">ci</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+    <span class="n">c_</span><span class="o">-&gt;</span><span class="n">ci</span><span class="p">.</span><span class="n">appendSample</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">wrist</span><span class="o">-&gt;</span><span class="n">p</span><span class="p">(),</span> <span class="n">wrist</span><span class="o">-&gt;</span><span class="n">attitude</span><span class="p">());</span>
+    <span class="n">c_</span><span class="o">-&gt;</span><span class="n">ci</span><span class="p">.</span><span class="n">appendSample</span><span class="p">(</span><span class="n">duration</span><span class="p">,</span> <span class="n">xyz</span><span class="p">,</span> <span class="n">rotFromRpy</span><span class="p">(</span><span class="n">rpy</span><span class="p">));</span>
+    <span class="n">c_</span><span class="o">-&gt;</span><span class="n">ci</span><span class="p">.</span><span class="n">update</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">c_</span><span class="o">-&gt;</span><span class="n">executeCartesianMotion</span><span class="p">(</span><span class="n">wrist</span><span class="p">,</span> <span class="n">jointPath</span><span class="p">);</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<p>最後にChoreonoidのプラグインとするためのおまじないを行います。<code>initiaize</code>メソッドはプラグインのロード時に実行され、その中の<code>ControllerManager::instance()-&gt;registController(...)</code>でteachingPluginにコントローラを登録しています。</p>
+<div class="codehilite"><pre><span></span><span class="c1">// SampleHiroControllerPlugin.cpp</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">cnoid</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">teaching</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">SampleHiroControllerPlugin</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Plugin</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+
+  <span class="n">SampleHiroControllerPlugin</span><span class="p">()</span> <span class="o">:</span> <span class="n">Plugin</span><span class="p">(</span><span class="s">&quot;SampleHiroController&quot;</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">require</span><span class="p">(</span><span class="s">&quot;Body&quot;</span><span class="p">);</span>
+    <span class="n">require</span><span class="p">(</span><span class="s">&quot;Teaching&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">initialize</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="n">ControllerManager</span><span class="o">::</span><span class="n">instance</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">registController</span><span class="p">(</span><span class="s">&quot;UR3dualController&quot;</span><span class="p">,</span> <span class="n">UR3dualController</span><span class="o">::</span><span class="n">instance</span><span class="p">());</span>
+
+    <span class="p">...</span>
+
+
+<span class="n">CNOID_IMPLEMENT_PLUGIN_ENTRY</span><span class="p">(</span><span class="n">SampleHiroControllerPlugin</span><span class="p">);</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>サンプルコードでは複数のコントローラを1つのプラグイン内で実装していますが、別のプラグインとした方が筋が良いです。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>現在の実装では、teachingPluginは複数のコントローラが登録されていたとしても、設定ファイルで指定された1つのコントローラのみ使用します。</p>
+</div>
+<p>タスクは明示的に特定のロボットやコントローラへの依存性を記述しません。上記の説明からわかる通り、teachingPluginはフロー、タスク、コマンドの実行時に対象コマンドが選択されているコントローラで実装されているかどうかを実行前にチェックし、全て実装されていれば実行を行います。異なるコントローラで同じI/Fのコマンドが実装されていればそのタスクは実行可能です。ただし、期待した動作になるかどうかは実装に依存します。</p>
+<!-- 登録されているI/Fが間違っている場合はエラーに、I/Fも正しくて実装 -->
+
+<!-- がおかしい場合は意図と異なる動作を行うことになります。-->
+
+<h2 id="ros"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> ROSを使ったコントローラの実装</h2>
+<p>UR3の双腕構成ロボットを例にROSを使った実装について説明します。ここでは<code>control_msgs::FollowJointTrajectoryAction</code>を利用してROS対応の実機や外部シミュレータと通信を行います。UR3およびRobotiqグリッパのROSによるdriverは複数あるので、ここでは以下の2つを使用しています。</p>
+<ul>
+<li><code>git clone -b iron-kinetic-devel https://github.com/iron-ox/ur_modern_driver</code></li>
+<li><code>git clone https://github.com/beta-robots/robotiq</code></li>
+</ul>
+<p><code>FollowTrajectoryControllerUR3Dual.h</code>でコマンド<code>MoveArmCommand</code>のクラスを定義する箇所はfake実行の場合とほぼ同じです。<code>FollowTrajectoryControllerUR3Dual.cpp</code>で<code>registerCommand</code>を行う箇所、<code>MoveArmCommand</code>の実装で引数のVariantを解釈する箇所は同じです。</p>
+<p>主な違いは<code>MoveArmCommand::operator()</code>の実装の中で、生成した軌道をROSのメッセージに詰めて送信した後、アームとグリッパの関節角度を受信しながら「シーン」ビューを更新する部分くらいになります。</p>
+<div class="codehilite"><pre><span></span>    <span class="n">trajectory_msgs</span><span class="o">::</span><span class="n">JointTrajectory</span> <span class="n">traj</span><span class="p">;</span>
+    <span class="n">traj</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span> <span class="o">=</span> <span class="n">ros</span><span class="o">::</span><span class="n">Time</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="n">nJoints</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">traj</span><span class="p">.</span><span class="n">joint_names</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">gripperDriverJoint</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">double</span> <span class="n">time</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="n">duration</span><span class="o">+</span><span class="n">dt</span><span class="p">;</span> <span class="n">time</span> <span class="o">+=</span> <span class="n">dt</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">time</span> <span class="o">&gt;</span> <span class="n">duration</span><span class="p">)</span> <span class="p">{</span> <span class="n">time</span> <span class="o">=</span> <span class="n">duration</span><span class="p">;</span> <span class="p">}</span>
+      <span class="n">VectorXd</span> <span class="n">qRef</span><span class="p">;</span>
+      <span class="n">qRef</span> <span class="o">=</span> <span class="n">c_</span><span class="o">-&gt;</span><span class="n">jointInterpolator</span><span class="p">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">time</span><span class="p">);</span>
+
+      <span class="n">trajectory_msgs</span><span class="o">::</span><span class="n">JointTrajectoryPoint</span> <span class="n">p</span><span class="p">;</span>
+      <span class="n">p</span><span class="p">.</span><span class="n">positions</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">nJoints</span><span class="p">);</span>
+      <span class="n">p</span><span class="p">.</span><span class="n">velocities</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">nJoints</span><span class="p">);</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nJoints</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">p</span><span class="p">.</span><span class="n">positions</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">qRef</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">p</span><span class="p">.</span><span class="n">velocities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">p</span><span class="p">.</span><span class="n">time_from_start</span> <span class="o">=</span> <span class="n">ros</span><span class="o">::</span><span class="n">Duration</span><span class="p">(</span><span class="n">time</span><span class="p">);</span>
+      <span class="n">traj</span><span class="p">.</span><span class="n">points</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">control_msgs</span><span class="o">::</span><span class="n">FollowJointTrajectoryGoal</span> <span class="n">goal</span><span class="p">;</span>
+    <span class="n">goal</span><span class="p">.</span><span class="n">trajectory</span> <span class="o">=</span> <span class="n">traj</span><span class="p">;</span>
+    <span class="n">traj_client</span><span class="o">-&gt;</span><span class="n">sendGoal</span><span class="p">(</span><span class="n">goal</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">traj_client</span><span class="o">-&gt;</span><span class="n">getState</span><span class="p">().</span><span class="n">isDone</span><span class="p">())</span> <span class="p">{</span>
+      <span class="n">c_</span><span class="o">-&gt;</span><span class="n">syncWithReal</span><span class="p">();</span>
+    <span class="p">}</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ROS(Kinetic)で動作確認しています。</p>
+</div>
+<!-- ##<i class="fa fa-arrow-circle-right" aria-hidden="true"></i> MoveIt!を使ったコントローラの実装 -->
+
+<!-- `MoveArmCommand`等を実装するにあたり、MoveIt!経由でロボットに軌道を送ることが考えられます。そうすることで、MoveIt!の自己干渉や環境との干渉を検出（あるいは回避）する機能、軌道実行時間の自動計算等を利用することが考えられます。 -->
+
+<!-- (tbd) -->
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../import_export/" title="Import/Export" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Import/Export
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../task_design/" title="タスクの設計" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                タスクの設計
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.583bbe55.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.3",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

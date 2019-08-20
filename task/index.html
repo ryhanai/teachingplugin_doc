@@ -1,0 +1,751 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>タスク - Teaching Plugin</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="352" height="448"
+    viewBox="0 0 352 448" id="__bitbucket">
+  <path fill="currentColor" d="M203.75 214.75q2 15.75-12.625 25.25t-27.875
+        1.5q-9.75-4.25-13.375-14.5t-0.125-20.5 13-14.5q9-4.5 18.125-3t16 8.875
+        6.875 16.875zM231.5 209.5q-3.5-26.75-28.25-41t-49.25-3.25q-15.75
+        7-25.125 22.125t-8.625 32.375q1 22.75 19.375 38.75t41.375 14q22.75-2
+        38-21t12.5-42zM291.25
+        74q-5-6.75-14-11.125t-14.5-5.5-17.75-3.125q-72.75-11.75-141.5 0.5-10.75
+        1.75-16.5 3t-13.75 5.5-12.5 10.75q7.5 7 19 11.375t18.375 5.5 21.875
+        2.875q57 7.25 112 0.25 15.75-2 22.375-3t18.125-5.375 18.75-11.625zM305.5
+        332.75q-2 6.5-3.875 19.125t-3.5 21-7.125 17.5-14.5 14.125q-21.5
+        12-47.375 17.875t-50.5 5.5-50.375-4.625q-11.5-2-20.375-4.5t-19.125-6.75-18.25-10.875-13-15.375q-6.25-24-14.25-73l1.5-4
+        4.5-2.25q55.75 37 126.625 37t126.875-37q5.25 1.5 6 5.75t-1.25 11.25-2
+        9.25zM350.75 92.5q-6.5 41.75-27.75 163.75-1.25 7.5-6.75 14t-10.875
+        10-13.625 7.75q-63 31.5-152.5
+        22-62-6.75-98.5-34.75-3.75-3-6.375-6.625t-4.25-8.75-2.25-8.5-1.5-9.875-1.375-8.75q-2.25-12.5-6.625-37.5t-7-40.375-5.875-36.875-5.5-39.5q0.75-6.5
+        4.375-12.125t7.875-9.375 11.25-7.5 11.5-5.625 12-4.625q31.25-11.5
+        78.25-16 94.75-9.25 169 12.5 38.75 11.5 53.75 30.5 4 5 4.125
+        12.75t-1.375 13.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Teaching Plugin" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Teaching Plugin
+              </span>
+              <span class="md-header-nav__topic">
+                タスク
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://bitbucket.org/hanai/teachingplugin/" title="Go to repository" class="md-source" data-md-source="bitbucket">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__bitbucket" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Bitbucket
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Teaching Plugin" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Teaching Plugin
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://bitbucket.org/hanai/teachingplugin/" title="Go to repository" class="md-source" data-md-source="bitbucket">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__bitbucket" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Bitbucket
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="はじめに" class="md-nav__link">
+      はじめに
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../getting_started/" title="試してみる" class="md-nav__link">
+      試してみる
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      ユーザガイド
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        ユーザガイド
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        タスク
+      </label>
+    
+    <a href="./" title="タスク" class="md-nav__link md-nav__link--active">
+      タスク
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title=" タスクデータとは" class="md-nav__link">
+     タスクデータとは
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title=" 検索と実行" class="md-nav__link">
+     検索と実行
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="環境のリセット" class="md-nav__link">
+    環境のリセット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="実行中断、コマンド単体での実行" class="md-nav__link">
+    実行中断、コマンド単体での実行
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title=" 動作の調整" class="md-nav__link">
+     動作の調整
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="パラメータ値の変更方法" class="md-nav__link">
+    パラメータ値の変更方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d" title="3Dモデルの位置変更" class="md-nav__link">
+    3Dモデルの位置変更
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title=" データの保存、複製、削除" class="md-nav__link">
+     データの保存、複製、削除
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../views/" title="ビューの操作" class="md-nav__link">
+      ビューの操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../workflow/" title="ワークフロー" class="md-nav__link">
+      ワークフロー
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../import_export/" title="Import/Export" class="md-nav__link">
+      Import/Export
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../controller/" title="コントローラ" class="md-nav__link">
+      コントローラ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../task_design/" title="タスクの設計" class="md-nav__link">
+      タスクの設計
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project_file/" title="プロジェクトファイル" class="md-nav__link">
+      プロジェクトファイル
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../config/" title="teachingPluginの設定" class="md-nav__link">
+      teachingPluginの設定
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../terms/" title="用語" class="md-nav__link">
+      用語
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../papers/" title="関連論文" class="md-nav__link">
+      関連論文
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title=" タスクデータとは" class="md-nav__link">
+     タスクデータとは
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title=" 検索と実行" class="md-nav__link">
+     検索と実行
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="環境のリセット" class="md-nav__link">
+    環境のリセット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="実行中断、コマンド単体での実行" class="md-nav__link">
+    実行中断、コマンド単体での実行
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title=" 動作の調整" class="md-nav__link">
+     動作の調整
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="パラメータ値の変更方法" class="md-nav__link">
+    パラメータ値の変更方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d" title="3Dモデルの位置変更" class="md-nav__link">
+    3Dモデルの位置変更
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title=" データの保存、複製、削除" class="md-nav__link">
+     データの保存、複製、削除
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">タスク</h1>
+<h2 id="_2"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> タスクデータとは</h2>
+<p>本ソフトウェアでは、ロボットの動作パターンと「ユーザがその動作で意図した作業内容を理解したり、動作パターンを調整するために役立つデータ」をまとめて管理します。後者のデータには3Dモデルと自由形式（画像やテキスト、動画など）のものがあります。</p>
+<p>本ソフトウェアではこのデータ単位をタスクと呼びます。狭義には自由形式のデータはタスクに含めませんが、以降の説明では明確に区別はしません。</p>
+<h2 id="_3"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> 検索と実行</h2>
+<p><img alt="タスクの検索と実行" src="../img/task.png" title="タスクの検索と実行" /></p>
+<ol>
+<li>「タスクインスタンス」ビューのテキストボックスに適当なキーワードを入力し、「検索」ボタンを押します。キーワードを空白区切りで複数指定するとand検索になります。空文字列で検索を行うと全データが表示されます。</li>
+<li>検索結果の一覧から適当なものをクリックして選択した後、「タスク実行」ボタンを押します。「シーン」ビューを見てロボットの動作を確認します。</li>
+</ol>
+<p>検索結果一覧には、タスクデータにつけられた名前、コメント、データの生成日時と最終更新日時が表示されます。一覧からあるエントリを選択すると、そのデータに登録されている3Dモデルが「シーン」ビュー内に表示されます。また、自由形式のファイルが対応づけられている場合には「メタデータ」ビューに表示されます。「メタデータ」ビューデータをダブルクリックすると画像は拡大表示、その他のデータは登録された外部アプリケーションで表示することができます。「メタデータ」ビューの該当するエリアにファイルをドラッグ&amp;ドロップすることでファイルを追加することができます。ファイルの削除には「削除」ボタンあるいはdeleteキーを使用します。ファイルの並び順を変更するにはエリア内でドラッグします。</p>
+<h3 id="_4">環境のリセット</h3>
+<p>タスクデータには3Dモデルに対する操作が記述されている場合があります。典型的にはロボットが物体を把持するタイミングでグリッパのリンクと把持対象物品の相対的な位置関係が固定（attach）され、物品を置いたタイミングでグリッパのリンクと把持されていた物品の間の位置関係の固定が解除（detach）されます。具体的にどのタイミングでどの操作が行われるかはタスクデータの定義に依存します。</p>
+<p>このような操作の結果、タスクを一度実行すると3Dモデルの位置が変化します。「モデル位置を元に戻す」ボタンを押すことで、3Dモデルの配置を初期位置に戻すことができます。</p>
+<p>ロボットの姿勢を初期化したい場合にはChoreonoidの機能をそのまま使用します。「アイテム」ビューからロボットのアイテム（サンプルデータの場合は<code>main_withHands</code>）を選択した状態で、ツールバーの「選択ボディを標準姿勢に」ボタンを押します。</p>
+<h3 id="_5">実行中断、コマンド単体での実行</h3>
+<p>実行中の動作を中断する場合には「abort」ボタンを押します。このボタンを押すと、その時に実行しているコマンドが終了した段階でタスクの実行を終了します。</p>
+<p>あるタスクの動作パターンはそのタスクを選択した状態で、「ステートマシン」ビューで確認することができます。ここで「コマンド実行」ボタンを押すことにより、単一のコマンドを実行することができます。動作シーケンスにおける特定の状態（物品把持位置など）を確認するときに役立ちます。ただし、動作シーケンスを実行した場合の環境に対する操作が再現される場合ではない点に注意が必要です。</p>
+<h2 id="_6"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> 動作の調整</h2>
+<h3 id="_7">パラメータ値の変更方法</h3>
+<p>動作パターンは通常、ある程度の調整が可能な形で定義されます。どのようなパラメータでどのような動作の調整を可能とするかは、アプリケーションやタスク設計者の経験、利用者が期待する使い方に大きく依存するので、ユーザ定義となっています。典型的には以下のようなパラメータが考えられます。</p>
+<ul>
+<li>対象物配置を調整可能とするパラメータ（pickする対象物の位置や把持している物品を組付ける位置）</li>
+<li>グリッパの違いを調整可能する把持姿勢に関するパラメータ</li>
+<li>ネジ締めトルクや押さえつける力等の制御パラメータ</li>
+<li>類似部品を表現するパラメータ</li>
+</ul>
+<p>パラメータを数値入力により変更するには「タスクパラメータ」ビューを使用します。</p>
+<h3 id="3d">3Dモデルの位置変更</h3>
+<p>物体の位置や姿勢の表現をフレームと呼びます。フレームは3Dモデルに紐付けることができます。タスクの定義時にタスクパラメータと3Dモデルの対応づけは行われますが、タスク利用時に別の3Dモデルに差替えることが可能です。この3Dモデルの差替えの詳細は<a href="../workflow/">ワークフロー</a>で説明します。タスクパラメータが3Dモデルに対応づけられているとき、その3Dモデルを「シーン」ビュー中で移動させることにより、タスクパラメータ値を変更することができます。</p>
+<h2 id="_8"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> データの保存、複製、削除</h2>
+<p>状態遷移図やパラメータ、メタデータなどの変更をデータベースに保存するには「選択したタスクを上書き保存する」ボタンを押します。既にあるタスクを残したまま別のタスクとして保存したい場合は、「新規タスクとして保存する」ボタンを押します。</p>
+<p>タスクを削除するには、対象の選択した状態で「選択したタスクを削除」ボタンを押します。</p>
+<!-- ## デバッグ実行 -->
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../getting_started/" title="試してみる" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                試してみる
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../views/" title="ビューの操作" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                ビューの操作
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.583bbe55.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.3",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
