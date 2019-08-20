@@ -1,0 +1,29 @@
+site_name: Teaching Plugin
+repo_url: https://bitbucket.org/hanai/teachingplugin/
+edit_uri: ''
+markdown_extensions:
+ - admonition
+ - def_list
+ - fontawesome_markdown
+ - codehilite
+extra_css:
+ - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+nav:
+ - はじめに: index.md
+ - 試してみる: getting_started.md
+ - ユーザガイド:
+   - タスク: task.md
+   - ビューの操作: views.md
+   - ワークフロー: workflow.md
+   - Import/Export: import_export.md
+   - コントローラ: controller.md
+   - タスクの設計: task_design.md
+   - プロジェクトファイル: project_file.md
+   - teachingPluginの設定: config.md
+   - 用語: terms.md
+ - 関連論文: papers.md
+ - FAQ: faq.md
+theme: material
+extra:
+  search:
+    language: jp
