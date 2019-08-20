@@ -284,8 +284,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" title="環境構築、サンプルデータの入手と実行" class="md-nav__link">
-    環境構築、サンプルデータの入手と実行
+  <a href="#_4" title="環境構築、サンプルデータの入手" class="md-nav__link">
+    環境構築、サンプルデータの入手
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="実行" class="md-nav__link">
+    実行
   </a>
   
 </li>
@@ -296,7 +303,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title=" ライセンス" class="md-nav__link">
+  <a href="#_6" title=" ライセンス" class="md-nav__link">
      ライセンス
   </a>
   
@@ -524,8 +531,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" title="環境構築、サンプルデータの入手と実行" class="md-nav__link">
-    環境構築、サンプルデータの入手と実行
+  <a href="#_4" title="環境構築、サンプルデータの入手" class="md-nav__link">
+    環境構築、サンプルデータの入手
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="実行" class="md-nav__link">
+    実行
   </a>
   
 </li>
@@ -536,7 +550,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title=" ライセンス" class="md-nav__link">
+  <a href="#_6" title=" ライセンス" class="md-nav__link">
      ライセンス
   </a>
   
@@ -577,35 +591,39 @@
 <li>Ubuntu18.04LTS</li>
 <li>Choreonoid 1.7.0</li>
 </ul>
-<h3 id="_4">環境構築、サンプルデータの入手と実行</h3>
+<h3 id="_4">環境構築、サンプルデータの入手</h3>
 <div class="codehilite"><pre><span></span><span class="gp">#</span> Choreonoidのダウンロードと依存パッケージのインストール
-<span class="gp">$</span> wget https://choreonoid.org/_downloads/choreonoid-1.7.0.zip
-<span class="gp">$</span> unzip choreonoid-1.7.0.zip
-<span class="gp">$</span> <span class="nb">cd</span> choreonoid-1.7.0/
-<span class="gp">$</span> ./misc/script/install-requisites-ubuntu-18.04.sh
-<span class="gp">$</span> mkdir -p build
+<span class="go">wget https://choreonoid.org/_downloads/choreonoid-1.7.0.zip</span>
+<span class="go">unzip choreonoid-1.7.0.zip</span>
+<span class="go">cd choreonoid-1.7.0/</span>
+<span class="go">./misc/script/install-requisites-ubuntu-18.04.sh</span>
+<span class="go">mkdir -p build</span>
 
 <span class="gp">#</span> teachingPluginとサンプルコントローラのダウンロード
-<span class="gp">$</span> git clone https://github.com/ryhanai/teachingplugin ext/teachingPlugin
-<span class="gp">$</span> git clone https://github.com/ryhanai/SampleTPControllerPlugin ext/SampleTPControllerPlugin
-<span class="gp">$</span> ./ext/teachingPlugin/misc/script/install-requisites-ubuntu-18.04.sh
+<span class="go">git clone https://github.com/ryhanai/teachingplugin ext/teachingPlugin</span>
+<span class="go">git clone https://github.com/ryhanai/SampleTPControllerPlugin ext/SampleTPControllerPlugin</span>
+<span class="go">./ext/teachingPlugin/misc/script/install-requisites-ubuntu-18.04.sh</span>
 
 <span class="gp">#</span> コンパイル
-<span class="gp">$</span> <span class="nb">cd</span> build
-<span class="gp">$</span> cmake .. -DBUILD_TEACHING_PLUGIN<span class="o">=</span>ON -DBUILD_SAMPLE_HIROCONTROLLER<span class="o">=</span>ON
-<span class="gp">#</span>
-<span class="gp">#</span> GUIを使いたい場合は
-<span class="gp">#</span> $ ccmake .. <span class="c1"># BUILD_TEACHING_PLUGIN=ON, BUILD_SAMPLE_HIROCONTROLLER=ONにする（デフォルトでON）</span>
-<span class="gp">#</span> 必要ないオプションを切ると、コンパイル時間を短くできます。
+<span class="go">cd build</span>
+<span class="go">cmake .. -DBUILD_TEACHING_PLUGIN=ON -DBUILD_SAMPLE_HIROCONTROLLER=ON -DUSE_ROS=OFF</span>
 
-<span class="gp">$</span> make -j8
+<span class="gp">#</span> GUIを使いたい場合は
+<span class="gp">#</span> $ ccmake .. 
+<span class="gp">#</span> <span class="nv">BUILD_TEACHING_PLUGIN</span><span class="o">=</span>ON, <span class="nv">BUILD_SAMPLE_HIROCONTROLLER</span><span class="o">=</span>ON, <span class="nv">USE_ROS</span><span class="o">=</span>OFFに設定します。
+<span class="gp">#</span> 必要ないオプションを切っておくと、コンパイル時間を短くできます。
+
+<span class="go">make -j8</span>
 
 <span class="gp">#</span> サンプルデータの取得
-<span class="gp">$</span> <span class="nb">cd</span> ../choreonoid-1.7.0/ext/teachingPlugin/share/project
-<span class="gp">$</span> wget <span class="s2">&quot;https://drive.google.com/uc?export=download&amp;id=119r3ddfe8cumd2JSz4dFfbiD3YWBMfKd&quot;</span> -O teachingDB.sqlite3
+<span class="go">cd ../ext/teachingPlugin/share/project</span>
+<span class="go">wget &quot;https://drive.google.com/uc?export=download&amp;id=119r3ddfe8cumd2JSz4dFfbiD3YWBMfKd&quot; -O teachingDB.sqlite3</span>
+</pre></div>
 
-<span class="gp">#</span><span class="c1">## 実行</span>
-<span class="gp">$</span> choreonoid-1.7.0/build/bin/choreonoid teaching_plugin.cnoid
+
+<h3 id="_5">実行</h3>
+<div class="codehilite"><pre><span></span><span class="go">choreonoid-1.7.0/build/bin/choreonoid teaching_plugin.cnoid</span>
+<span class="gp">#</span> choreonoidのパスは必要に応じて補ってください。
 </pre></div>
 
 
@@ -613,7 +631,7 @@
 <p class="admonition-title">Note</p>
 <p>サンプルデータのダウンロードに失敗する場合は、<a href="https://drive.google.com/open?id=119r3ddfe8cumd2JSz4dFfbiD3YWBMfKd">ここ</a>から手動でダウンロードし、<code>teachingDB.sqlite3</code>という名前で保存してください。</p>
 </div>
-<h2 id="_5"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> ライセンス</h2>
+<h2 id="_6"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> ライセンス</h2>
 <p>本ソフトウェアはオープンソースソフトウェアとして開発されており、そのライセンスはMITライセンスとしております。</p>
 <!-- ##<i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Dockerイメージの利用 -->
 
