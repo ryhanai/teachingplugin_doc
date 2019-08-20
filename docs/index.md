@@ -21,37 +21,41 @@ teachingPluginはロボットの教示ソフトウェアの一種です。あら
 * Ubuntu18.04LTS
 * Choreonoid 1.7.0
 
-### 環境構築、サンプルデータの入手と実行
+### 環境構築、サンプルデータの入手
 
 ```console
 # Choreonoidのダウンロードと依存パッケージのインストール
-$ wget https://choreonoid.org/_downloads/choreonoid-1.7.0.zip
-$ unzip choreonoid-1.7.0.zip
-$ cd choreonoid-1.7.0/
-$ ./misc/script/install-requisites-ubuntu-18.04.sh
-$ mkdir -p build
+wget https://choreonoid.org/_downloads/choreonoid-1.7.0.zip
+unzip choreonoid-1.7.0.zip
+cd choreonoid-1.7.0/
+./misc/script/install-requisites-ubuntu-18.04.sh
+mkdir -p build
 
 # teachingPluginとサンプルコントローラのダウンロード
-$ git clone https://github.com/ryhanai/teachingplugin ext/teachingPlugin
-$ git clone https://github.com/ryhanai/SampleTPControllerPlugin ext/SampleTPControllerPlugin
-$ ./ext/teachingPlugin/misc/script/install-requisites-ubuntu-18.04.sh
+git clone https://github.com/ryhanai/teachingplugin ext/teachingPlugin
+git clone https://github.com/ryhanai/SampleTPControllerPlugin ext/SampleTPControllerPlugin
+./ext/teachingPlugin/misc/script/install-requisites-ubuntu-18.04.sh
 
 # コンパイル
-$ cd build
-$ cmake .. -DBUILD_TEACHING_PLUGIN=ON -DBUILD_SAMPLE_HIROCONTROLLER=ON
-#
-# GUIを使いたい場合は
-# $ ccmake .. # BUILD_TEACHING_PLUGIN=ON, BUILD_SAMPLE_HIROCONTROLLER=ONにする（デフォルトでON）
-# 必要ないオプションを切ると、コンパイル時間を短くできます。
+cd build
+cmake .. -DBUILD_TEACHING_PLUGIN=ON -DBUILD_SAMPLE_HIROCONTROLLER=ON -DUSE_ROS=OFF
 
-$ make -j8
+# GUIを使いたい場合は
+# $ ccmake .. 
+# BUILD_TEACHING_PLUGIN=ON, BUILD_SAMPLE_HIROCONTROLLER=ON, USE_ROS=OFFに設定します。
+# 必要ないオプションを切っておくと、コンパイル時間を短くできます。
+
+make -j8
 
 # サンプルデータの取得
-$ cd ../choreonoid-1.7.0/ext/teachingPlugin/share/project
-$ wget "https://drive.google.com/uc?export=download&id=119r3ddfe8cumd2JSz4dFfbiD3YWBMfKd" -O teachingDB.sqlite3
+cd ../ext/teachingPlugin/share/project
+wget "https://drive.google.com/uc?export=download&id=119r3ddfe8cumd2JSz4dFfbiD3YWBMfKd" -O teachingDB.sqlite3
+```
 
 ### 実行
-$ choreonoid-1.7.0/build/bin/choreonoid teaching_plugin.cnoid
+```console
+choreonoid-1.7.0/build/bin/choreonoid teaching_plugin.cnoid
+# choreonoidのパスは必要に応じて補ってください。
 ```
 
 !!!Note
